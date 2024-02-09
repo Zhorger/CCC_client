@@ -1,0 +1,55 @@
+<!--html-->
+<body appClickedOutside (clickedOutside)="handleOutsiteClick()">
+    <div class="viewbar"  [ngClass]="{'viewbar-fixed': isFixedviewbar}">
+       <div class="container" fxLayout="row wrap" fxLayoutAlign="start center">
+          <div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+             <button  mat-icon-button class="viewbar-toggle" (click)="toggleviewbar()">
+                <span class="material-symbols-outlined">
+                    preview
+                </span>
+             </button>
+          </div>
+          <div class="top-viewbar" id="views">
+            <div class="viewbar-box-out">
+               <input type="checkbox" id="check5">
+               <input type="checkbox" id="check6">
+               <div class="container">
+                  <app-view-popup></app-view-popup>
+               </div>
+               <div class="list" id="list">
+                  <div>
+                     <li class="nav-list">
+                        <label for="check5" class="nav-label team" (click)="expandTeam()"> <!-- (click)="expandTeam()" -->
+                           <a><strong>Team View</strong></a>
+                           <div class="symbol">
+                              <span id="minusTeam"><strong>-</strong></span>
+                              <span id="plusTeam"><strong>+</strong></span>
+                           </div>
+                        </label>
+                        <ng-container #teamContainer></ng-container>
+                     </li>
+                  </div>
+                  <div>
+                     <li class="nav-list">
+                        <label for="check6" class="nav-label personal" (click)="expandPersonal()"> <!-- (click)="expandPersonal()" -->
+                           <a><strong>Personal View</strong></a>
+                           <div class="symbol">
+                              <span id="minusPersonal"><strong>-</strong></span>
+                              <span id="plusPersonal"><strong>+</strong></span>
+                           </div>
+                        </label>
+                        <ng-container #personContainer></ng-container>
+                     </li>
+                  </div>
+               </div>
+               <div class="edit">
+                  <button class="edit-btn" mat-button (click)="toggleEdit()"
+                  id="create" style="background: #727272">
+                    <a><strong>Edit Views</strong></a>
+                  </button> 
+               </div>
+            </div>
+         </div>
+       </div>
+    </div>   
+</body>

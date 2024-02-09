@@ -1,0 +1,19 @@
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,-25" />
+
+<body>
+
+<div class="logo">
+  <img src=".\assets\CCClogo.png" class="top_logo" alt="Logo"/>
+</div>
+
+<div class="side_banner">
+  <div class="nav-align">
+      <app-navbar [newValue]="this.newValue" (navData)="childData($event)"></app-navbar>
+      <app-view [newValue]="this.newValue" (viewData)="childData($event)"></app-view>
+  </div>
+</div>
+<router-outlet (activate)="onActivate($event)">
+  <ng-container #table></ng-container>
+</router-outlet>
+</body>

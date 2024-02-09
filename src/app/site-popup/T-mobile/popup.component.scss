@@ -1,0 +1,46 @@
+//css
+.layout {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    // grid-template-rows: repeat(auto-fit, 20vh);
+    // justify-content: center;
+    grid-template-columns: repeat(2, 55vh);
+    gap: 4px;
+}
+
+.files{
+    min-width: 30vh;
+    max-width: 30vh;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
+.no_marg{
+ margin: 0 0 0px !important;
+}
+
+.notes {
+    min-width: 50vh;
+    min-height: 125px;
+    max-width: 50vh;
+    max-height: 33vh;
+}
+
+.line {
+    min-width: 50vh;
+    min-height: 20px;
+    max-width: 50vh;
+    max-height: 33vh;
+}
+
+.word {
+    min-width: 50vh;
+    min-height: 20px;
+    max-width: 50vh;
+    max-height: 33vh;
+}
+
+.file-input {
+    display: none;
+}

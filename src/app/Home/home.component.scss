@@ -1,0 +1,72 @@
+.top_banner {
+  height: 84px;
+  display: flex;
+  position: relative;
+  background: #e9e9e9;
+  top: 0;
+  box-shadow: 9px -6px 13px 2px;
+}
+
+.side_banner {
+  padding-top: 84px;
+  height: calc(100vh - 84px);
+  width: 41px;
+  float: left;
+  background: #e9e9e9;
+  box-shadow: -9px -2px 13px 6px;
+}
+.top_icons {
+  right: 5px;
+  height: 45px;
+  top: 19px;
+  align-self: center;
+  position: absolute;
+  z-index: 11;
+}
+.top_logo {
+  z-index: 1;
+  left: 5px;
+  top: 5px;
+  width: 250px;
+  height:74px;
+  position: absolute;
+}
+.logo{
+  height: 84px;
+  width: 41px;
+  top: 0px;
+  left: 0px;
+  z-index: 998;
+  position: absolute;
+  background: #e9e9e9;
+}
+.center{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: calc(100% - 84px);
+}
+label{
+  display: grid;
+  background: #fff;
+  width: 550px;
+  height: 350px;
+  text-align: center;
+  align-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 12px 5px rgb(0 0 0 / 30%);
+  border-radius: 4px;
+}
+.welcome{
+  width: 250px;
+  background: #e9e9e9 !important;
+  font-size: 1.7rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-shadow: none !important;
+  color: rgb(36, 36, 111); 
+}
+img{
+  width: 440px; 
+  height: 132px;
+  padding-bottom: 15px;
+}

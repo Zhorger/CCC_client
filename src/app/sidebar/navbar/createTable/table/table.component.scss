@@ -1,0 +1,45 @@
+//css
+a{
+  color: #ffffff;
+}
+.black-a{
+  color: #000;
+}
+
+.tble-label{
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  display: block;
+  width: 202px;
+  background: #3f51b5;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  margin: auto;
+  margin-left: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  z-index: 1;
+}
+.edit-label{
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  display: none;
+  top: 0px;
+  left: 152px;
+  line-height: 40px;
+  color: #fff; background: #919191;
+  margin-bottom: 12px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1;
+}
+.view-label.edit{
+  width: 133px;
+  position: absolute;
+  margin-bottom: 1px;
+}
+.edit-label.edit{
+  display: block;
+}

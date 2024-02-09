@@ -1,0 +1,380 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<h1 mat-dialog-title style="margin: 0 0 -4px;">{{site_id}}</h1>
+<div mat-dialog-content class="mat-typography" style="height: 75vh; max-height: 75vh;">
+  
+  <mat-tab-group>
+    <mat-tab label="Site View">
+      <section class="layout">
+        <div>
+          <form>
+            <p class="no_marg"><label for="site_idTxt">Site ID:</label></p>
+            <textarea class="word" id="site_idTxt" name="siteViewForm">{{site_id}} </textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="addressTxt">Address:</label></p>
+            <textarea class="line" id="addressTxt" name="siteViewForm">{{address}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="cityTxt">City:</label></p>
+            <textarea class="word" id="cityTxt" name="siteViewForm">{{city}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="stateTxt">State:</label></p>
+            <textarea class="word" id="stateTxt" name="siteViewForm">{{state}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="zipTxt">Zip:</label></p>
+            <textarea class="word" id="zipTxt" name="siteViewForm">{{zip}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="countyTxt">County:</label></p>
+            <textarea class="line" id="countyTxt" name="siteViewForm">{{county}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="latitudeTxt">LAT:</label></p>
+            <textarea class="word" id="latitudeTxt" name="siteViewForm">{{latitude}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="longitudeTxt">LONG:</label></p>
+            <textarea class="word" id="longitudeTxt" name="siteViewForm">{{longitude}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="structure_typeTxt">Structure Type:</label></p>
+            <textarea class="line" id="structure_typeTxt" name="siteViewForm">{{structure_type}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="structure_heightTxt">Structure Height:</label></p>
+            <textarea class="word" id="structure_heightTxt" name="siteViewForm">{{structure_height}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="site_acqTxt">Site ACQ:</label></p>
+            <textarea class="line" id="site_acqTxt" name="siteViewForm">{{site_acq}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="cmTxt">CM:</label></p>
+            <textarea class="word" id="cmTxt" name="siteViewForm">{{cm}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="aeTxt">AE:</label></p>
+            <textarea class="word" id="aeTxt" name="siteViewForm">{{ae}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="dish_prio_listTxt">Dish Priority List:</label></p>
+            <textarea class="word" id="dish_prio_listTxt" name="siteViewForm">{{dish_prio_list}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="site_notesTxt">Site Notes:</label></p>
+            <textarea class="notes" id="site_notesTxt" name="siteViewForm">{{site_notes}}</textarea>
+          </form>
+        </div>
+        <div>
+          <form>
+            <p class="no_marg"><label for="site_acq_notesTxt">Site ACQ Notes:</label></p>
+            <textarea class="notes" id="site_acq_notesTxt" name="siteViewForm">{{site_acq_notes}}</textarea>
+          </form>
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="design_notesTxt">Design Notes:</label></p> 
+            <textarea class="notes" id="design_notesTxt" name="siteViewForm">{{design_notes}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="action_ownerTxt">Action Owner:</label></p> 
+            <textarea class="line" id="action_ownerTxt" name="siteViewForm">{{action_owner}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="fdnyTxt">FDNY:</label></p> 
+            <textarea class="word" id="fdnyTxt" name="siteViewForm">{{fdny}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="lpcTxt">LPC:</label></p> 
+            <textarea class="word" id="lpcTxt" name="siteViewForm">{{lpc}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="dob_440sqftTxt">DOB 440SQFT:</label></p> 
+            <textarea class="line" id="dob_440sqftTxt" name="siteViewForm">{{dob_440sqft}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="other_carrier_presentTxt">Other Carrier Present:</label></p> 
+            <textarea class="word" id="other_carrier_presentTxt" name="siteViewForm">{{other_carrier_present}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="revisit_completeTxt">Revisit Complete:</label></p> 
+            <textarea class="word" id="revisit_completeTxt" name="siteViewForm">{{revisit_complete}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="tppn_received_aeTxt">TPPN Received AE:</label></p> 
+            <textarea class="line" id="tppn_received_aeTxt" name="siteViewForm">{{tppn_received_ae}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="submeterTxt">Submeter:</label></p> 
+            <textarea class="line" id="submeterTxt" name="siteViewForm">{{submeter}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="full_sow_matrixTxt">Full SOW Matrix to Customer:</label></p> 
+            <textarea class="word" id="full_sow_matrixTxt" name="siteViewForm">{{full_sow_matrix}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="po_receivedTxt">PO Received:</label></p> 
+            <textarea class="word" id="po_receivedTxt" name="siteViewForm">{{po_received}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="dv_readyTxt">DV Ready to be Scheduled:</label></p> 
+            <textarea class="word" id="dv_readyTxt" name="siteViewForm">{{dv_ready}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="po_issued_aeTxt">PO Issued to AE:</label></p> 
+            <textarea class="word" id="po_issued_aeTxt" name="siteViewForm">{{po_issued_ae}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="dv_targetTxt">DV Target:</label></p> 
+            <textarea class="word" id="dv_targetTxt" name="siteViewForm">{{dv_target}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="dv_completedTxt">DV Completed:</label></p> 
+            <textarea class="word" id="dv_completedTxt" name="siteViewForm">{{dv_completed}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="dv_summaryTxt">DV Summary:</label></p> 
+            <textarea class="word" id="dv_summaryTxt" name="siteViewForm">{{dv_summary}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="title_requestTxt">Title Request:</label></p> 
+            <textarea class="word" id="title_requestTxt" name="siteViewForm">{{title_request}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="_2c_orderedTxt">2C Ordered:</label></p> 
+            <textarea class="word" id="_2c_orderedTxt" name="siteViewForm">{{_2c_ordered}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="_2c_receivedTxt">2C Received:</label></p> 
+            <textarea class="word" id="_2c_receivedTxt" name="siteViewForm">{{_2c_received}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="_2c_reviewedTxt">2C Reviewed:</label></p> 
+            <textarea class="word" id="_2c_reviewedTxt" name="siteViewForm">{{_2c_reviewed}}</textarea> 
+          </form> 
+        </div>
+        <div> 
+          <form> 
+            <p class="no_marg"><label for="_2c_uploadedTxt">2C Uploaded:</label></p> 
+            <textarea class="word" id="_2c_uploadedTxt" name="siteViewForm">{{_2c_uploaded}}</textarea> 
+          </form> 
+        </div>
+      </section>
+    </mat-tab>
+
+    <mat-tab label="Files"> 
+      <section class="layout">
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="_2c_fileName">
+              2C/1A Upload:
+            </label></p>
+            <input id="_2c_fileName" name="{{_2c}}" type="file" class="file-input" (change)="onFileSelected($event)" #_2c_fileUpload>
+            <button class="files" id="_2c_fileName" mat-button (click)="downloadFile($event)">
+              {{_2c || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="_2c_fileName" (click)="_2c_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="FDNY_fileName">
+              FDNY Upload:
+            </label></p>
+            <input id="FDNY_fileName" type="file" name="{{FDNY}}" class="file-input" (change)="onFileSelected($event)" #FDNY_fileUpload>
+            <button class="files" id="FDNY_fileName" mat-button (click)="downloadFile($event)">
+              {{FDNY || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="FDNY_fileName" (click)="FDNY_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="SS_NFC_fileName">
+              SS NFC Drawings Upload:
+            </label></p>
+            <input id="SS_NFC_fileName" type="file" name="{{ss_nfc}}" class="file-input" (change)="onFileSelected($event)" #SS_NFC_fileUpload>
+            <button class="files" id="SS_NFC_fileName" mat-button (click)="downloadFile($event)">
+              {{ss_nfc || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="SS_NFC_fileName" (click)="SS_NFC_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="SA_fileName">
+              SA Upload:
+            </label></p>
+            <input id="SA_fileName" type="file" name="{{SA}}" class="file-input" (change)="onFileSelected($event)" #SA_fileUpload>
+            <button class="files" id="SA_fileName" mat-button (click)="downloadFile($event)">
+              {{SA || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="SA_fileName" (click)="SA_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="CD_fileName">
+              RTC CD Upload:
+            </label></p>
+            <input id="CD_fileName" type="file" name="{{CD}}" class="file-input" (change)="onFileSelected($event)" #CD_fileUpload>
+            <button class="files" id="CD_fileName" mat-button (click)="downloadFile($event)">
+              {{CD || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="CD_fileName" (click)="CD_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="Lease_Package_fileName">
+              Lease Package Upload:
+            </label></p>
+            <input id="Lease_Package_fileName" type="file" name="{{lease_Package}}" class="file-input" (change)="onFileSelected($event)" #Lease_Package_fileUpload>
+            <button class="files" id="Lease_Package_fileName" mat-button (click)="downloadFile($event)">
+              {{lease_Package || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="Lease_Package_fileName" (click)="Lease_Package_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="LPC_Package_fileName">
+              LPC Package Upload:
+            </label></p>
+            <input id="LPC_Package_fileName" type="file" name="{{lpc_Package}}" class="file-input" (change)="onFileSelected($event)" #LPC_Package_fileUpload>
+            <button class="files" id="LPC_Package_fileName" mat-button (click)="downloadFile($event)">
+              {{lpc_Package || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="LPC_Package_fileName" (click)="LPC_Package_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+      </section>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="">Cancel</button>
+  <button mat-button color="primary" cdkFocusInitial (click)="saveChanges()" [mat-dialog-close]="
+  [
+  site_id              ,   
+  address              ,   
+  city                 ,   
+  state                ,   
+  zip                  ,   
+  county               ,   
+  latitude             ,   
+  longitude            ,   
+  structure_type       ,   
+  structure_height     ,   
+  site_acq             ,   
+  cm                   ,   
+  ae                   ,   
+  dish_prio_list       ,   
+  site_notes           ,   
+  site_acq_notes       ,   
+  design_notes         ,   
+  action_owner         ,   
+  fdny                 ,   
+  lpc                  ,   
+  dob_440sqft          ,   
+  other_carrier_present,   
+  revisit_complete     ,   
+  tppn_received_ae     ,   
+  submeter             ,   
+  full_sow_matrix      ,   
+  po_received          ,   
+  dv_ready             ,   
+  po_issued_ae         ,   
+  dv_target            ,   
+  dv_completed         ,   
+  dv_summary           ,   
+  title_request        ,   
+  _2c_ordered          ,   
+  _2c_received         ,   
+  _2c_reviewed         ,   
+  _2c_uploaded         ,   
+  ]">Save</button>
+</mat-dialog-actions>

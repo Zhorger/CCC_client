@@ -1,0 +1,99 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<h1 mat-dialog-title style="margin: 0 0 -4px;">{{site_id}}</h1>
+<div mat-dialog-content class="mat-typography dialog" style="height: 75vh; max-height: 75vh;">
+  
+  <mat-tab-group>
+    <mat-tab label="Site View">
+        <section class="layout" (change)="onTextChanged($event)" >
+          <div>
+            <form>
+              <p class="no_marg"><label for="site_id">Site ID:</label></p>
+              <textarea class="word" id="site_id" name="siteViewForm">{{site_id}} </textarea>
+            </form>
+          </div>
+          <div>
+            <form>
+              <p class="no_marg"><label for="address">Address:</label></p>
+              <textarea class="line" id="address" name="siteViewForm">{{address}}</textarea>
+            </form>
+          </div>
+          <div>
+            <form>
+              <p class="no_marg"><label for="city">City:</label></p>
+              <textarea class="word" id="city" name="siteViewForm">{{city}}</textarea>
+            </form>
+          </div>
+          <div>
+            <form>
+              <p class="no_marg"><label for="state">State:</label></p>
+              <textarea class="word" id="state" name="siteViewForm">{{state}}</textarea>
+            </form>
+          </div>
+          <div>
+            <form>
+              <p class="no_marg"><label for="zip">Zip:</label></p>
+              <textarea class="word" id="zip" name="siteViewForm">{{zip}}</textarea>
+            </form>
+          </div>
+          <div>
+            <form>
+              <p class="no_marg"><label for="county">County:</label></p>
+              <textarea class="line" id="county" name="siteViewForm">{{county}}</textarea>
+            </form>
+          </div>
+          <div>
+            <form>
+              <p class="no_marg"><label for="complete_date_p">Projected Date:</label></p>
+              <textarea class="word" id="complete_date_p" name="siteViewForm">{{complete_date_p}}</textarea>
+            </form>
+          </div>
+          <div>
+            <form>
+              <p class="no_marg"><label for="complete_date_a">Complete Date:</label></p>
+              <textarea class="word" id="complete_date_a" name="siteViewForm">{{complete_date_a}}</textarea>
+            </form>
+          </div>
+        </section>
+    </mat-tab>
+
+    <mat-tab label="Files"> 
+      <section class="layout">
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="_2c_fileName">
+              2C Upload:
+            </label></p>
+            <input id="_2c_fileName" name="{{_2c}}" type="file" class="file-input" (change)="onFileSelected($event)" #_2c_fileUpload>
+            <button class="files" id="_2c_fileName" mat-button (click)="downloadFile($event)">
+              {{_2c || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="_2c_fileName" (click)="_2c_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+        <div>
+          <form action="" method="POST" enctype="multipart/form-data">
+            <p class="no_marg"><label for="_1a_fileName">
+              1A Upload:
+            </label></p>
+            <input id="_1a_fileName" type="file" name="{{_1a}}" class="file-input" (change)="onFileSelected($event)" #_1a_fileUpload>
+            <button class="files" id="_1a_fileName" mat-button (click)="downloadFile($event)">
+              {{_1a || "No file uploaded yet."}}
+            </button>
+            <button mat-icon-button color="primary" id="_1a_fileName" (click)="_1a_fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+          </form>
+        </div>
+      </section>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+  
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="">Cancel</button>
+  <button mat-button color="primary" cdkFocusInitial (click)="saveChanges()" [mat-dialog-close]="[_2c, _1a,
+  site_id, address, city, state, zip, county, complete_date_p, complete_date_a]">Save</button>
+</mat-dialog-actions>
+

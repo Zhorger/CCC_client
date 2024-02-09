@@ -1,0 +1,37 @@
+<body>
+    <form [formGroup]="forgotForm" autocomplete="new-password"> 
+        <h1>Change Password</h1>
+        <div class="form-control">
+            <label for="email"> Re-enter Email </label>
+            <input 
+                formControlName="email" 
+                id="email" 
+                autocomplete="new-password" 
+                type="email"
+            />
+        </div>
+        <div class="form-control">
+            <label for="password"> Password </label>
+            <input 
+                formControlName="password" 
+                id="password" 
+                autocomplete="new-password" 
+                type="password"
+            />
+        </div>
+        <div class="form-control">
+            <label for="password2"> Re-Enter Password </label>
+            <input 
+                formControlName="password2" 
+                id="password2" 
+                autocomplete="new-password" 
+                type="password"
+            />
+        </div>
+        <button mat-flat-button color="primary"
+          cdkFocusInitial (click)="forgot()" type="submit"> 
+            Change Password
+        </button>
+        <a href="login" class="signup">Remembered Password</a>
+    </form>
+</body>

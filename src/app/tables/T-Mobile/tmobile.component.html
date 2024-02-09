@@ -1,0 +1,101 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div class="top_banner">
+<div class="top_icons">
+  <!-- <button mat-icon-button>
+    <span class="material-symbols-outlined">
+      nightlight
+    </span>
+  </button> -->
+ <app-userBanner></app-userBanner>
+</div>
+<div class="table-icons">
+  <form method="POST" enctype="multipart/form-data">
+    <input class="file-input" type="file" (change)="this.onFileSelected($event)"  onchange="console.log(event.target.files)" 
+    accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" #exe_upload>
+    <button mat-stroked-button class="icon" (click)="exe_upload.click()"
+    title="Attach Excel File To Upload">
+      {{this.currentFile || "No File Selected"}}
+    </button>
+    <button mat-icon-button (click)="onImport()" class="icon" title="Upload Excel File Attached">
+      <span class="material-symbols-outlined">
+        cloud_upload
+        </span>
+    </button>
+    <button mat-icon-button (click)="onAdd()" class="icon table-buttons"> 
+      <span class="material-symbols-outlined" title="Add a new Row, to the current table">
+        add
+      </span>
+    </button>
+    <!-- <button mat-icon-button (click)="onRemoveSelected()">
+      <span class="material-symbols-outlined" title="Remove Selected Rows">
+        remove
+      </span>
+    </button> -->
+    <!-- <button mat-icon-button>
+      <span class="material-symbols-outlined">
+        nightlight
+      </span>
+    </button> -->
+  </form>
+</div>
+</div>
+
+<div class="main_body">
+  <div class="table">
+    <div class="ag-theme-alpine-dark" style="height: 100%;">
+      <ag-grid-angular 
+      #agGrid style="height: 100%;" 
+      id="myGrid" 
+      class="ag-theme-alpine-dark"
+      [autoGroupColumnDef]="autoGroupColumnDef" 
+      [animateRows]="true" 
+      [columnDefs]="columnDefs" 
+      [components]="components"
+      [context]="context"
+      [defaultColDef]="defaultColDef" 
+      [enableRangeSelection]="enableRangeSelection"
+      [enableFillHandle]="enableFillHandle"
+      [suppressLastEmptyLineOnPaste]="suppressLastEmptyLineOnPaste"
+      [suppressCopyRowsToClipboard]="suppressCopyRowsToClipboard"
+      [frameworkComponents]="frameworkComponents"
+      [rowSelection]="rowSelection" 
+      [rowGroupPanelShow]="'always'" [rowModelType]="rowModelType"
+      [rowStyle]="rowStyle" [getRowStyle]="getRowStyle"
+      [serverSideStoreType]="serverSideStoreType"
+      [sideBar]="sideBar"
+      [undoRedoCellEditing]="undoRedoCellEditing"
+      [undoRedoCellEditingLimit]="undoRedoCellEditingLimit"
+      (cellEditingStopped)="cellEditingStopped($event)"
+      (cellValueChanged)="onCellValueChanged($event)"
+      (gridReady)="onGridReady($event)"
+      (keydown.tab)="onKeyDown($event)">
+      </ag-grid-angular>	
+      <div class="container center changes">
+        <div class="changes_banner center">
+          <div class="mini_changes">
+            Save
+            <span>^</span>
+          </div>
+          <div class="max_changes">
+            <button mat-icon-button class="undoRedo" (click)="undo()">
+              <span class="material-symbols-outlined" title="Undo Changes">
+                undo
+              </span>
+            </button>
+            <button mat-icon-button class="undoRedo" (click)="redo()"> 
+              <span class="material-symbols-outlined" title="Redo Changes">
+                redo
+              </span>           
+            </button>
+            <button mat-button class="saveBtn rounded4 btn_save" (click)="onUpdate()">
+              <span title="Save Changes that are Highlighted"> 
+                Save Changes
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

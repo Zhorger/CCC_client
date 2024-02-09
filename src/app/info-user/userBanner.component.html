@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<body appClickedOutside (clickedOutside)="handleOutsiteClick()">
+    <div>
+        <button mat-button class="user-icon" (click)="toggleMenu()">
+            {{userName}}
+            <span>↓</span>
+        </button>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <h3> {{userEmail}} </h3>
+                </div>
+                <hr>
+
+                <a href="#" class="sub-menu-link">
+                    <div class="material-symbols-outlined sub-menu-link-img">
+                        person
+                    </div>
+                    <p> Edit Profile </p>
+                    <span> > </span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <div class="material-symbols-outlined sub-menu-link-img">
+                        settings
+                    </div>
+                    <p> Settings & Privacy </p>
+                    <span> > </span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <div class="material-symbols-outlined sub-menu-link-img">
+                        help
+                    </div>
+                    <p> Help & Support </p>
+                    <span> > </span>
+                </a>
+
+            <a (click)="this.logout()" class="sub-menu-link">
+                    <div class="material-symbols-outlined sub-menu-link-img">
+                        logout
+                    </div>
+                    <p> Logout </p>
+                    <span> > </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>

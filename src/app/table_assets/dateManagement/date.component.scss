@@ -1,0 +1,19 @@
+.custom-date-filter a {
+  position: absolute;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.54);
+  cursor: pointer;
+  
+}
+
+.custom-date-filter:after {
+  position: absolute;
+  content: '\f073';
+  display: block;
+  font-weight: 400;
+  font-family: 'Font Awesome 5 Free';
+  margin-left: 92%;
+  top: 50%;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.54);
+}

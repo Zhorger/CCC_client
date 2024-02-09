@@ -1,0 +1,79 @@
+@mixin focus{
+    &:focus{
+        outline-offset: 2px;
+        outline: 2px solid #07c;
+    }
+}
+body{
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+}
+form{
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 16px 16px 32px;
+    box-shadow: 0 2px 32px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    background-color:#fff;
+    h1{
+        margin-top: 0;
+        color: #0b0163;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+.form-control{
+    margin-bottom: 16px;
+    input, label{
+        display: block;
+    }
+
+    label{
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    input{
+        padding: 8px;
+        height: 35px;
+        border-radius: 4px;
+        justify-content: center;
+        width: 95%;
+        border: 2px solid #ccc;
+        background-color: #fff;
+        @include focus;
+    }
+    .name{
+        width:43% !important;
+        margin: 2px 4px;
+    }
+}
+.label{
+    width: 55%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.div-label{
+    display: flex; 
+    margin: 2px 4px;
+}
+button{
+    padding: 8px 24px;
+    width: 100%;
+    font-size: 1.2rem;
+    @include focus;
+}
+.signup{
+    float: right;
+    margin: 8px 16px;
+}
+.forgot{
+    float: left;
+    flex-wrap: wrap;
+    margin: 8px 16px;
+    align-content: center;
+    justify-content: center;
+}

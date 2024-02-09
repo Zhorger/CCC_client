@@ -1,0 +1,103 @@
+//css
+.layout {
+    padding-top: 20px;
+    display: grid;
+    // grid-template-rows: repeat(auto-fit, 20vh);
+    // justify-content: center;
+    grid-template-columns: repeat(1, 20vw);
+    gap: 4px;
+}
+.popup{
+  height: 100px;
+  max-height: 100px;
+}
+
+.no_marg{
+ margin: 0 0 0px !important;
+}
+
+.line {
+    min-width: 20vw;
+    min-height: 20px;
+    max-width: 20vw;
+    max-height: 33vh;
+}
+
+//css
+.view-list{
+    list-style-type: none;
+    margin: auto;
+  }
+  .view-button{
+    width: 200px;
+    margin: auto;
+    margin-left: 12px;
+    margin-top: 2px;
+    margin-bottom: 25px;
+    z-index: 1;
+  }
+  a{
+    color: #ffffff;
+  }
+  .black-a{
+    color: #000;
+  }
+  
+  ///
+  ///         THE FOLLOWING IS FOR viewbar
+  ///           Expanding and collapsing 
+  ///                   Buttons 
+  /// 
+  
+  .container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+  }
+  .view-create{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    display: block;
+    width: 202px;
+    background: #3f51b5;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin: auto;
+    margin-left: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    z-index: 1;
+  }
+
+  //css
+  a{
+    color: #ffffff;
+  }
+  .black-a{
+    color: #000;
+  }
+  
+  ///
+  ///         THE FOLLOWING IS FOR viewbar
+  ///           Expanding and collapsing 
+  ///                   Buttons 
+  /// 
+  .edit-label{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    display: none;
+    top: 0px;
+    left: 152px;
+    line-height: 40px;
+    color: #fff; background: #727272;
+    margin-bottom: 12px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .edit-label.edit{
+    display: block;
+  }

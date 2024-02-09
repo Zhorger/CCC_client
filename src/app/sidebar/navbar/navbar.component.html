@@ -1,0 +1,168 @@
+<!--html-->
+<body appClickedOutside (clickedOutside)="handleOutsiteClick()">
+<div class="navbar"  [ngClass]="{'navbar-fixed': isFixedNavbar}">
+   <div class="container" fxLayout="row wrap" fxLayoutAlign="start center">
+      <div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+         <button  mat-icon-button class="navbar-toggle" (click)="toggleNavbar()">
+            <span class="material-symbols-outlined">
+                menu
+              </span>
+         </button>
+      </div>
+      <div class="top-navbar" id="navbar">
+         <div class="navbar-box-out">
+            <input type="checkbox" id="check1">
+            <input type="checkbox" id="check2">
+            <input type="checkbox" id="check3">
+            <input type="checkbox" id="check4">
+            <div class="container">
+               <app-table-popup></app-table-popup>
+            </div>
+            <div class="list" id="list">
+               <li class="nav-list">
+                  <label class="nav-label">
+                     <a href="/home"><strong>Home</strong></a>
+                  </label>
+               </li> 
+               <li class="nav-list">
+                  <label for="check1" class="nav-label tmobile" (click)="expandTMobile()">
+                     <a><strong>T-Mobile</strong></a>
+                     <div class="symbol">
+                        <span id="minusTmobile"><strong>-</strong></span>
+                        <span id="plusTmobile"><strong>+</strong></span>
+                     </div>
+                  </label>
+                  <div>
+                     <div class="table-div tmobiles">
+                        <div class="table-button tmobiles" routerLink="/tables/t-mobile">
+                           <a class="black-a"><strong>Test</strong></a>
+                        </div>
+                        <app-edittable-popup></app-edittable-popup>
+                     </div>
+                     <div class="table-div tmobiles">
+                        <div class="table-button tmobiles" routerLink="/tables/t-mobile/finance">
+                           <a class="black-a"><strong>Finance</strong></a>
+                        </div>
+                        <app-edittable-popup></app-edittable-popup>
+                     </div>
+                     <div class="table-div tmobiles">
+                        <div class="table-button tmobiles" href="#Example">
+                           <a class="black-a"><strong>Example</strong></a>
+                        </div>
+                        <app-edittable-popup></app-edittable-popup>
+                     </div>
+                     <ng-container #tmobile></ng-container>
+                  </div>
+               </li>
+               <li class="nav-list">
+                  <label for="check2" class="nav-label dish" (click)="expandDish()">
+                     <a><strong>Dish</strong></a>
+                     <div class="symbol">
+                        <span id="minusDish"><strong>-</strong></span>
+                        <span id="plusDish"><strong>+</strong></span>
+                     </div>
+                  </label>
+                  <div>
+                     <div class="table-div dishs">
+                        <div id="dishs" class="table-button dishs" routerLink="/tables/dish">
+                           <a class="black-a"><strong>New Build</strong></a>
+                        </div>
+                        <app-edittable-popup></app-edittable-popup>
+                     </div>
+                     <ng-container #dish></ng-container>  
+                  </div>
+               </li>
+               <!-- <li class="nav-list">
+                  <ng-container #verizon></ng-container>
+               </li>
+               <li class="nav-list">
+                  <ng-container #at_t></ng-container>
+               </li> -->
+               <li class="nav-list">
+                  <label for="check3" class="nav-label reference" (click)="expandReferences()">
+                     <a><strong>Reference</strong></a>
+                     <div class="symbol">
+                        <span id="minusReference"><strong>-</strong></span>
+                        <span id="plusReference"><strong>+</strong></span>
+                     </div>
+                  </label>
+                  <div>
+                     <div class="table-div references">
+                        <div class="table-button references" routerLink="/tables/reference/T-MobileNY">
+                           <a class="black-a"><strong>T-Mobile</strong></a>
+                        </div>
+                        <app-edittable-popup></app-edittable-popup>
+                     </div>
+                     <ng-container #reference></ng-container>
+                  </div>
+               </li>
+               <li class="nav-list">
+                  <label for="check4" class="nav-label extra" (click)="expandExtra()">
+                     <a><strong>Extra</strong></a>
+                     <div class="symbol">
+                        <span id="minusExtra"><strong>-</strong></span>
+                        <span id="plusExtra"><strong>+</strong></span>
+                     </div>
+                  </label>
+                  <div>
+                     <div class="table-div extras">
+                        <div class="table-button extras" routerLink="/tables/users">
+                           <a class="black-a"><strong>Users</strong></a>
+                        </div>
+                        <app-edittable-popup></app-edittable-popup>
+                     </div>
+                     <ng-container #extra></ng-container>
+                  </div>
+               </li>
+            </div>
+            <div class="edit">
+               <button class="edit-btn" mat-button 
+               id="create" style="background: #727272;" (click)="toggleEdit()">
+                 <a><strong>Edit Tables</strong></a>
+               </button>    
+            </div>
+         </div>
+      </div>
+   </div>
+</div> 
+   
+</body>
+
+
+<!-- <div class="table-button tmobiles3">
+   <a routerLink="T-Mobile" class="black-a"><strong>Test</strong></a>
+</div>
+<div class="table-button tmobiles4">
+   <a href="#Finance" class="black-a"><strong>Finance</strong></a>
+</div>
+<div class="table-button tmobiles5">
+   <a href="#Example" class="black-a"><strong>Example</strong></a>
+</div>
+<div class="table-button tmobiles6">
+   <a routerLink="T-Mobile" class="black-a"><strong>Test</strong></a>
+</div>
+<div class="table-button tmobiles7">
+   <a href="#Finance" class="black-a"><strong>Finance</strong></a>
+</div>
+<div class="table-button tmobiles8">
+   <a href="#Example" class="black-a"><strong>Example</strong></a>
+</div>
+<div class="table-button tmobiles9">
+   <a routerLink="T-Mobile" class="black-a"><strong>Test</strong></a>
+</div>
+<div class="table-button tmobiles10">
+   <a href="#Finance" class="black-a"><strong>Finance</strong></a>
+</div>
+<div class="table-button tmobiles11">
+   <a href="#Example" class="black-a"><strong>Example</strong></a>
+</div>
+<div class="table-button tmobiles12">
+   <a routerLink="T-Mobile" class="black-a"><strong>Test</strong></a>
+</div>
+<div class="table-button tmobiles13">
+   <a href="#Finance" class="black-a"><strong>Finance</strong></a>
+</div>
+<div class="table-button tmobiles14">
+   <a href="#Example" class="black-a"><strong>Example</strong></a>
+</div> -->
+

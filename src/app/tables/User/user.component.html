@@ -1,0 +1,79 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="top_banner">
+<div class="top_icons">
+  <!-- <button mat-icon-button>
+    <span class="material-symbols-outlined">
+      nightlight
+    </span>
+  </button> -->
+ <app-userBanner></app-userBanner>
+</div>
+<div class="table-icons">
+    <button mat-icon-button (click)="onAdd()" class="icon table-buttons"> 
+      <span class="material-symbols-outlined" title="Add a Row">
+        add
+      </span>
+    </button>
+    <!-- <button mat-icon-button (click)="onRemoveSelected()">
+      <span class="material-symbols-outlined" title="Remove Selected Rows">
+        remove
+      </span>
+    </button> -->
+</div>
+</div>
+
+<div class="main_body">
+  <div class="table">
+    <div class="ag-theme-alpine-dark" style="height: 100%;">
+      <ag-grid-angular 
+      #agGrid style="height: 100%;" 
+      id="myGrid" 
+      class="ag-theme-alpine-dark"
+      [autoGroupColumnDef]="autoGroupColumnDef" 
+      [animateRows]="true" 
+      [columnDefs]="columnDefs" 
+      [components]="components"
+      [context]="context"
+      [defaultColDef]="defaultColDef" 
+      [enableRangeSelection]="enableRangeSelection"
+      [enableFillHandle]="enableFillHandle"
+      [suppressLastEmptyLineOnPaste]="suppressLastEmptyLineOnPaste"
+      [suppressCopyRowsToClipboard]="suppressCopyRowsToClipboard"
+      [frameworkComponents]="frameworkComponents"
+      [rowSelection]="rowSelection" [rowModelType]="rowModelType"
+      [rowStyle]="rowStyle" [getRowStyle]="getRowStyle"
+      [serverSideStoreType]="serverSideStoreType"
+      [sideBar]="sideBar"
+      [undoRedoCellEditing]="undoRedoCellEditing"
+      [undoRedoCellEditingLimit]="undoRedoCellEditingLimit"
+      (cellValueChanged)="onCellValueChanged($event)"
+      (gridReady)="onGridReady($event)">
+      </ag-grid-angular>	
+      <div class="container center changes">
+        <div class="changes_banner center">
+          <div class="mini_changes">
+            Save
+            <span>^</span>
+          </div>
+          <div class="max_changes">
+            <button mat-icon-button class="undoRedo" (click)="undo()">
+              <span class="material-symbols-outlined" title="Undo Changes">
+                undo
+              </span>
+            </button>
+            <button mat-icon-button class="undoRedo" (click)="redo()"> 
+              <span class="material-symbols-outlined" title="Redo Changes">
+                redo
+              </span>           
+            </button>
+            <button mat-button class="saveBtn rounded4 btn_save" (click)="onUpdate()">
+              <span title="Save Changes that are Highlighted"> 
+                Save Changes
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

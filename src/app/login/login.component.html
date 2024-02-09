@@ -1,0 +1,35 @@
+<body>
+    <form [formGroup]="loginForm" autocomplete="new-password"> 
+        <h1>Login</h1>
+
+        <div class="form-control">
+            <label for="email"> Email </label>
+            <input 
+                formControlName="email" 
+                id="email" 
+                autocommplete="new-password" 
+                type="email"
+            />
+        </div>
+
+        <div class="form-control">
+            <label for="password"> Password </label>
+            <input 
+                formControlName="password" 
+                id="password" 
+                autocomplete="new-password" 
+                type="password"
+            />
+        </div>
+        <button mat-flat-button color="primary" cdkFocusInitial 
+          (click)="login()" type="submit"> 
+            Login 
+        </button>
+        <div style="text-align: center;">
+            <label for="remember">Remember Me</label>
+            <input type="checkbox" id="remember" [ngModelOptions]="{standalone: true}" [(ngModel)]="rememberMe">
+        </div>
+        <a href="forgot-password" class="forgot">Forgot Password</a>
+        <a href="signup" class="signup">Sign-up</a>
+    </form>
+</body>
